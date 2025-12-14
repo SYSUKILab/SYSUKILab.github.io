@@ -28,7 +28,7 @@ Dr. Ziyu Lyu is currently an Associate Professor at School of Cyber Science and 
 
 
 
-{{< icon "globe" >}} [Faculty Page](https://scst.sysu.edu.cn/members/members01/1410204.htm) | {{< icon "link" >}} [Personal Website](https://sites.google.com/site/crystalziyulu/home) | {{< icon "xiaohongshu" >}} [Rednote](https://www.xiaohongshu.com/user/profile/5bbda6d9e1822b0001c528d7)
+{{< icon "globe" >}} [Faculty Page](https://scst.sysu.edu.cn/teacher/LvZiyu) | {{< icon "link" >}} [Personal Website](https://sites.google.com/site/crystalziyulu/home) | {{< icon "xiaohongshu" >}} [Rednote](https://www.xiaohongshu.com/user/profile/5bbda6d9e1822b0001c528d7)
 {{< icon "email" >}} **Email**: lvzy7@mail.sysu.edu.cn  
 {{< icon "mobile" >}} **Address**: Room 910D, Engineering Building No.2, Shenzhen Campus of Sun Yat-sen University, No.66 Gongchang Road, Guangming District, Shenzhen, 518107, P. R. China
 </div>
