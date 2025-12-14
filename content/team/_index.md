@@ -68,7 +68,7 @@ Recommender Systems<br>
 <strong>Wenbin Guo</strong><br>
 Ph.D. Student (2025.09-)<br>
 AI Safety<br>
-{{< icon "email" >}} <a href="mailto:gordongwb@foxmail.com">gordongwb@foxmail.com</a>
+{{< icon "email" >}} <a href="mailto:guowb28@mail2.sysu.edu.cn">guowb28@mail2.sysu.edu.cn</a>
 </div>
 </div> 
 
