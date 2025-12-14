@@ -63,7 +63,7 @@ Recommender Systems<br>
 </div>
 
 <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-<img src="/images/wenbin_guo.jpg" alt="Wenbin Guo" style="width: 180px; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+<img src="/images/wenbin_guo.png" alt="Wenbin Guo" style="width: 180px; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
 <div>
 <strong>Wenbin Guo</strong><br>
 Ph.D. Student (2025.09-)<br>
