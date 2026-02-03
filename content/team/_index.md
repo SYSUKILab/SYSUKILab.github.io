@@ -93,6 +93,25 @@ Recommender Systems<br>
 </div>
 </div>
 
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+<img src="/images/chengcheng_song.jpg" alt="Chengcheng Song" style="width: 180px; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+<div>
+<strong>Chengcheng Song</strong><br>
+Incoming Student (2025.09-)<br>
+AI Safety<br>
+{{< icon "email" >}} <a href="mailto:songcc2602@163.com">songcc2602@163.com</a>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+<img src="/images/yuxing_zhu.png" alt="Yuxing Zhu" style="width: 180px; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+<div>
+<strong>Yuxing Zhu</strong><br>
+Incoming Student (2025.09-)<br>
+{{< icon "email" >}} <a href="mailto:zhuyx24925@gmail.com">zhuyx24925@gmail.com</a>
+</div>
+</div>
+
 </div>
 
 <!-- ### Research Interns
