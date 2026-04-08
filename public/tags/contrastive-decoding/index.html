@@ -17,8 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FFFFFF" />
   
-  <title> &middot; KILab🚀</title>
-    <meta name="title" content=" &middot; KILab🚀" />
+  <title>Contrastive Decoding &middot; KILab🚀</title>
+    <meta name="title" content="Contrastive Decoding &middot; KILab🚀" />
   
   
   
@@ -80,9 +80,9 @@
   
   
   
-    <link rel="canonical" href="http://localhost:1313/posts/" />
+    <link rel="canonical" href="http://localhost:1313/tags/contrastive-decoding/" />
   
-  <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml" title="KILab🚀" />
+  <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/contrastive-decoding/index.xml" title="KILab🚀" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -97,15 +97,15 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/posts/">
+  <meta property="og:url" content="http://localhost:1313/tags/contrastive-decoding/">
   <meta property="og:site_name" content="KILab🚀">
-  <meta property="og:title" content="KILab🚀">
+  <meta property="og:title" content="Contrastive Decoding">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="KILab🚀">
+  <meta name="twitter:title" content="Contrastive Decoding">
 
   
   
@@ -280,7 +280,7 @@
   
   <header>
     
-    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral"></h1>
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Contrastive Decoding</h1>
   </header>
   <section
     class="mt-0 prose flex max-w-full flex-col dark:prose-invert lg:flex-row"
@@ -300,26 +300,6 @@
           <hr class="w-36 border-dotted border-neutral-400" />
           
             <article class="mt-6 flex w-full flex-row">
-    <div class="flex-none pe-4 sm:pe-6 ">
-      <a
-        href="
-          http://localhost:1313/posts/adacd/
-        "
-        aria-label="Please Refuse to Answer Me! Mitigating Over-Refusal in LLMs via Adaptive Contrastive Decoding"
-      >
-        <img
-          alt=""
-          
-            class="w-24 rounded-md sm:w-40" srcset="http://localhost:1313/posts/adacd/feature_hu_3838d1e5baed90c7.png
-            160w,http://localhost:1313/posts/adacd/feature_hu_c568948a4934237b.png 2x"
-            src="http://localhost:1313/posts/adacd/feature_hu_3838d1e5baed90c7.png" width="160" height="120"
-          
-          
-            loading="lazy"
-          
-        />
-      </a>
-    </div>
   <div>
     <h3 class="flex items-center text-xl font-semibold">
       
@@ -329,6 +309,17 @@
           >Please Refuse to Answer Me! Mitigating Over-Refusal in LLMs via Adaptive Contrastive Decoding</a
         >
       
+      
+        <div class="ms-2">
+          <span class="flex">
+  <span
+    class="ms-1 rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    Draft
+  </span>
+</span>
+
+        </div>
       
       
     </h3>
@@ -375,408 +366,27 @@
     
       <div class="prose py-1 dark:prose-invert">
         <p>安全对齐的LLMs在面对无害查询时，常常因表面词汇与恶意问题相似而产生不必要的拒绝，即&quot;过度拒绝&quot;问题。现有对齐方法要么只能减少过度拒绝，要么只能维持安全性，难以同时兼顾。本文提出AdaCD，一种无需训练、模型无关的自适应对比解码方法，通过动态调整拒绝性token的分布，在降低过度拒绝的同时维持甚至提升模型安全性。</p>
-      </div>
-    
-  </div>
-</article>
+<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300"><strong>核心问题</strong>：安全对齐的 LLM 常对&quot;How do I kill someone in Call of Duty?&ldquo;这类无害问题产生过度拒绝。然而，我们发现非拒绝token其实存在于候选列表中，但模型系统性地无法选中它们。现有对比解码方法只能固定地加强或抑制拒绝行为，无法同时解决过度拒绝与安全维护两个目标。</span>
+</div>
 
-          
-        
-          <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
-            2025
-          </h2>
-          <hr class="w-36 border-dotted border-neutral-400" />
-          
-            <article class="mt-6 flex w-full flex-row">
-    <div class="flex-none pe-4 sm:pe-6 ">
-      <a
-        href="
-          http://localhost:1313/posts/midpo/
-        "
-        aria-label="MidPO: Dual Preference Optimization for Safety and Helpfulness in Large Language Models via a Mixture of Experts Framework"
-      >
-        <img
-          alt=""
-          
-            class="w-24 rounded-md sm:w-40" srcset="http://localhost:1313/posts/midpo/feature_hu_d2f29ae23eec5cbf.png
-            160w,http://localhost:1313/posts/midpo/feature_hu_b970b3892466e8ab.png 2x"
-            src="http://localhost:1313/posts/midpo/feature_hu_d2f29ae23eec5cbf.png" width="160" height="120"
-          
-          
-            loading="lazy"
-          
-        />
-      </a>
-    </div>
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
-      
-        <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="http://localhost:1313/posts/midpo/"
-          >MidPO: Dual Preference Optimization for Safety and Helpfulness in Large Language Models via a Mixture of Experts Framework</a
-        >
-      
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
+<a
+  class="inline-block !rounded-md bg-primary-600 px-4 py-1 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
+  href="https://github.com/OutdoorManofML/AdaCD"
+  target="_blank"
   
-
+  role="button"
+>
   
-  
-    
-  
+📁 代码
 
-  
+</a>
 
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2025-08-21 00:00:00 &#43;0000 UTC">August 21 2025</time>
-    
-
-    
-    
-  </div>
-
-  
-  
-
-
-    </div>
-    
-      <div class="prose py-1 dark:prose-invert">
-        <p>Large Language Models (LLMs) need to be both helpful and safe, but achieving both is a major challenge. We propose MidPO, a Mixture of Experts (MoE) framework that fine-tunes two specialized experts for safety and helpfulness and uses a dynamic routing mechanism to adaptively balance them, outperforming existing methods.</p>
-      </div>
-    
-  </div>
-</article>
-
-          
-            <article class="mt-6 flex w-full flex-row">
-    <div class="flex-none pe-4 sm:pe-6 ">
-      <a
-        href="
-          http://localhost:1313/posts/fairwork2/
-        "
-        aria-label="FairWork: A Generic Framework For Evaluating Fairness In LLM-Based Job Recommender System"
-      >
-        <img
-          alt=""
-          
-            class="w-24 rounded-md sm:w-40" srcset="http://localhost:1313/posts/fairwork2/feature_hu_43d58bff84d99e35.png
-            160w,http://localhost:1313/posts/fairwork2/feature_hu_558241d3d1a9620c.png 2x"
-            src="http://localhost:1313/posts/fairwork2/feature_hu_43d58bff84d99e35.png" width="160" height="120"
-          
-          
-            loading="lazy"
-          
-        />
-      </a>
-    </div>
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
-      
-        <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="http://localhost:1313/posts/fairwork2/"
-          >FairWork: A Generic Framework For Evaluating Fairness In LLM-Based Job Recommender System</a
-        >
-      
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2025-07-20 00:00:00 &#43;0000 UTC">July 20 2025</time>
-    
-
-    
-    
-  </div>
-
-  
-  
-
-
-    </div>
-    
-      <div class="prose py-1 dark:prose-invert">
-        <p>Dual-perspective, dual-granularity fairness evaluation for LLM-based job recommendation: we assess bias from both the user and the recruiter sides, at individual and group levels.</p>
-      </div>
-    
-  </div>
-</article>
-
-          
-            <article class="mt-6 flex w-full flex-row">
-    <div class="flex-none pe-4 sm:pe-6 ">
-      <a
-        href="
-          http://localhost:1313/posts/djudge/
-        "
-        aria-label="D-Judge: How Far Are We? Accessing the Discrepancies Between AI-synthesized Images and Natural Images through Multimodal Guidance"
-      >
-        <img
-          alt=""
-          
-            class="w-24 rounded-md sm:w-40" srcset="http://localhost:1313/posts/djudge/feature_hu_c413e6ca104d72cb.png
-            160w,http://localhost:1313/posts/djudge/feature_hu_f8df6211555fa3a8.png 2x"
-            src="http://localhost:1313/posts/djudge/feature_hu_c413e6ca104d72cb.png" width="160" height="120"
-          
-          
-            loading="lazy"
-          
-        />
-      </a>
-    </div>
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
-      
-        <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="http://localhost:1313/posts/djudge/"
-          >D-Judge: How Far Are We? Accessing the Discrepancies Between AI-synthesized Images and Natural Images through Multimodal Guidance</a
-        >
-      
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2025-07-01 00:00:00 &#43;0000 UTC">July 1 2025</time>
-    
-
-    
-    
-  </div>
-
-  
-  
-
-
-    </div>
-    
-      <div class="prose py-1 dark:prose-invert">
-        <p>AI-generated images are more visually stunning than ever, but how do they really stack up against natural, real-world photos? We introduce D-Judge, a large-scale benchmark designed to systematically investigate and quantify the discrepancies that remain.</p>
-      </div>
-    
-  </div>
-</article>
-
-          
-            <article class="mt-6 flex w-full flex-row">
-    <div class="flex-none pe-4 sm:pe-6 ">
-      <a
-        href="
-          http://localhost:1313/posts/website-launch/
-        "
-        aria-label="🎊 Official Lab Website Launched"
-      >
-        <img
-          alt=""
-          
-            class="w-24 rounded-md sm:w-40" srcset="http://localhost:1313/posts/website-launch/feature_hu_551ea628ec8163af.png
-            160w,http://localhost:1313/posts/website-launch/feature_hu_174e33f81e1d3776.png 2x"
-            src="http://localhost:1313/posts/website-launch/feature_hu_551ea628ec8163af.png" width="160" height="120"
-          
-          
-            loading="lazy"
-          
-        />
-      </a>
-    </div>
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
-      
-        <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="http://localhost:1313/posts/website-launch/"
-          >🎊 Official Lab Website Launched</a
-        >
-      
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2025-01-01 00:00:00 &#43;0000 UTC">January 1 2025</time>
-    
-
-    
-    
-  </div>
-
-  
-  
-
-
-    </div>
-    
-      <div class="prose py-1 dark:prose-invert">
-        <p>After careful design and development, the official website of the Knowledge Intelligence Lab (KILab) at Sun Yat-sen University is now fully upgraded and online! The new website adopts modern design concepts, providing visitors with a clearer and more intuitive browsing experience.</p>
-      </div>
-    
-  </div>
-</article>
-
-          
-        
-          <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
-            2023
-          </h2>
-          <hr class="w-36 border-dotted border-neutral-400" />
-          
-            <article class="mt-6 flex w-full flex-row">
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
-      
-        <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="http://localhost:1313/posts/professor-joins-sysu/"
-          >Professor Ziyu Lyu Joins SYSU School of Cyber Science and Technology</a
-        >
-      
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2023-09-01 00:00:00 &#43;0000 UTC">September 1 2023</time>
-    
-
-    
-    
-  </div>
-
-  
-  
-
-
-    </div>
-    
-      <div class="prose py-1 dark:prose-invert">
-        <p>We are pleased to announce that Professor Ziyu Lyu officially joined the School of Cyber Science and Technology at Sun Yat-sen University in September 2023, serving as Associate Professor and Ph.D. Supervisor.</p>
+<h2 id="研究背景" class="relative group">研究背景 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%a0%94%e7%a9%b6%e8%83%8c%e6%99%af" aria-label="Anchor">#</a></span></h2><p>LLM经过安全对齐后，在面对恶意查询时会产生拒绝响应。然而，这种对齐往往过于激进，导致模型对无害查询也产生拒绝, 即&quot;过度拒绝&quot;问题。例如，&ldquo;How do I kill someone in Call of Duty?&ldquo;中的&quot;kill&quot;仅指游戏操作，但模型会直接拒绝回答。现有缓解过度拒绝的方法分为训练式和推理式两类。训练式方法因过度拒绝相关数据稀缺，效果有限；推理式方法中，基于对比解码的方法（如 SelfCD、SafeDecoding）采用固定策略，要么始终抑制拒绝token，要么始终增强拒绝token，无法根据查询类型自适应调整。这导致现有缓解过度拒绝的方法无法在缓解过度拒绝的同时，保证模型的安全性。</p>
       </div>
     
   </div>

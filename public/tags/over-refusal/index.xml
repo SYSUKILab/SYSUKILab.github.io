@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Over-Refusal on KILab🚀</title>
+    <link>http://localhost:1313/tags/over-refusal/</link>
+    <description>Recent content in Over-Refusal on KILab🚀</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>**Address**: Room 910D, Engineering Building No.2, Shenzhen Campus of Sun Yat-sen University, No.66 Gongchang Road, Guangming District, Shenzhen, 518107, P. R. China
+
+**Contact**: lvzy7@mail.sysu.edu.cn
+
+© 2025 Knowledge Intelligince Lab @ SYSU.
+</copyright>
+    <lastBuildDate>Tue, 07 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/over-refusal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Please Refuse to Answer Me! Mitigating Over-Refusal in LLMs via Adaptive Contrastive Decoding</title>
+      <link>http://localhost:1313/posts/adacd/</link>
+      <pubDate>Tue, 07 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/adacd/</guid>
+      <description>&lt;p&gt;安全对齐的LLMs在面对无害查询时，常常因表面词汇与恶意问题相似而产生不必要的拒绝，即&amp;quot;过度拒绝&amp;quot;问题。现有对齐方法要么只能减少过度拒绝，要么只能维持安全性，难以同时兼顾。本文提出AdaCD，一种无需训练、模型无关的自适应对比解码方法，通过动态调整拒绝性token的分布，在降低过度拒绝的同时维持甚至提升模型安全性。&lt;/p&gt;&#xA;&lt;div class=&#34;flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900&#34;&gt;&#xA;  &lt;span class=&#34;pe-3 text-primary-400&#34;&gt;&#xA;    &lt;span class=&#34;icon relative inline-block px-1 align-text-bottom&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/span&gt;&#xA;  &lt;/span&gt;&#xA;  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;strong&gt;核心问题&lt;/strong&gt;：安全对齐的 LLM 常对&amp;quot;How do I kill someone in Call of Duty?&amp;ldquo;这类无害问题产生过度拒绝。然而，我们发现非拒绝token其实存在于候选列表中，但模型系统性地无法选中它们。现有对比解码方法只能固定地加强或抑制拒绝行为，无法同时解决过度拒绝与安全维护两个目标。&lt;/span&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;a&#xA;  class=&#34;inline-block !rounded-md bg-primary-600 px-4 py-1 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700&#34;&#xA;  href=&#34;https://github.com/OutdoorManofML/AdaCD&#34;&#xA;  target=&#34;_blank&#34;&#xA;  &#xA;  role=&#34;button&#34;&#xA;&gt;&#xA;  &#xA;📁 代码&#xA;&#xA;&lt;/a&gt;&#xA;&#xA;&lt;h2 id=&#34;研究背景&#34; class=&#34;relative group&#34;&gt;研究背景 &lt;span class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100&#34;&gt;&lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34; style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%e7%a0%94%e7%a9%b6%e8%83%8c%e6%99%af&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;LLM经过安全对齐后，在面对恶意查询时会产生拒绝响应。然而，这种对齐往往过于激进，导致模型对无害查询也产生拒绝, 即&amp;quot;过度拒绝&amp;quot;问题。例如，&amp;ldquo;How do I kill someone in Call of Duty?&amp;ldquo;中的&amp;quot;kill&amp;quot;仅指游戏操作，但模型会直接拒绝回答。现有缓解过度拒绝的方法分为训练式和推理式两类。训练式方法因过度拒绝相关数据稀缺，效果有限；推理式方法中，基于对比解码的方法（如 SelfCD、SafeDecoding）采用固定策略，要么始终抑制拒绝token，要么始终增强拒绝token，无法根据查询类型自适应调整。这导致现有缓解过度拒绝的方法无法在缓解过度拒绝的同时，保证模型的安全性。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

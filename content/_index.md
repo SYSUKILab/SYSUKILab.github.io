@@ -16,8 +16,23 @@ Our lab is directed by Dr. Ziyu Lyu. We are dedicated to advancing cutting-edge 
 
 <div class="project-carousel">
   <div class="carousel-container">
-    <!-- D-Judge Slide -->
+    <!-- AdaCD Slide -->
     <div class="carousel-slide active" data-slide="0">
+      <div class="slide-image">
+        <img src="/posts/adacd/feature.png" alt="AdaCD Project" />
+      </div>
+      <div class="slide-content">
+        <div class="project-badge">🛡️ AI Safety</div>
+        <h2>AdaCD</h2>
+        <p>Adaptive Contrastive Decoding to mitigate over-refusal while preserving LLM safety</p>
+        <div class="project-links">
+          <a href="/posts/adacd/" class="btn btn-primary">📄 Post</a>
+          <a href="https://github.com/OutdoorManofML/AdaCD" target="_blank" class="btn btn-secondary">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+    <!-- D-Judge Slide -->
+    <div class="carousel-slide" data-slide="1">
       <div class="slide-image">
         <img src="/projects/D-judge/1.png" alt="D-Judge Project" />
       </div>
@@ -33,7 +48,7 @@ Our lab is directed by Dr. Ziyu Lyu. We are dedicated to advancing cutting-edge 
       </div>
     </div>
     <!-- MidPO Slide -->
-    <div class="carousel-slide" data-slide="1">
+    <div class="carousel-slide" data-slide="2">
       <div class="slide-image">
         <img src="/projects/MidPO/1.png" alt="MidPO Project" />
       </div>
@@ -48,7 +63,7 @@ Our lab is directed by Dr. Ziyu Lyu. We are dedicated to advancing cutting-edge 
       </div>
     </div>
     <!-- FairWork Slide -->
-    <div class="carousel-slide" data-slide="2">
+    <div class="carousel-slide" data-slide="3">
       <div class="slide-image">
         <img src="/projects/FairWork/1.png" alt="FairWork Project" />
       </div>
@@ -66,13 +81,18 @@ Our lab is directed by Dr. Ziyu Lyu. We are dedicated to advancing cutting-edge 
   
   <!-- Navigation Indicators -->
   <div class="carousel-indicators">
-    <button class="indicator active" data-slide="0" aria-label="Go to D-Judge"></button>
-    <button class="indicator" data-slide="1" aria-label="Go to MidPO"></button>
-    <button class="indicator" data-slide="2" aria-label="Go to FairWork"></button>
+    <button class="indicator active" data-slide="0" aria-label="Go to AdaCD"></button>
+    <button class="indicator" data-slide="1" aria-label="Go to D-Judge"></button>
+    <button class="indicator" data-slide="2" aria-label="Go to MidPO"></button>
+    <button class="indicator" data-slide="3" aria-label="Go to FairWork"></button>
   </div>
 </div>
 
 
+
+{{< alert "lightbulb" >}}
+[2026.4] Congrats to **Pengyu Qi**! Our work, "Please Refuse to Answer Me! Mitigating Over-Refusal in LLMs via Adaptive Contrastive Decoding", has been accepted by **ACL 2026 Main Conference**.
+{{< /alert >}}
 
 {{< alert "lightbulb" >}}
 [2025.8] Congrats to **Pengyu Qi**! Our work, "MidPO: Dual Preference Optimization for Safety and Helpfulness in LLMs via MoE Framework", has been accepted by **EMNLP FINDING 2025**.
