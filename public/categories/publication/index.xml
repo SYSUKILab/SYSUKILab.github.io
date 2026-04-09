@@ -12,8 +12,15 @@
 
 © 2025 Knowledge Intelligince Lab @ SYSU.
 </copyright>
-    <lastBuildDate>Thu, 21 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/publication/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation</title>
+      <link>http://localhost:1313/posts/raie/</link>
+      <pubDate>Tue, 07 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/raie/</guid>
+      <description>&lt;p&gt;We study the problem of &lt;strong&gt;user preference drift&lt;/strong&gt; in LLM-based recommendation and propose &lt;strong&gt;RAIE&lt;/strong&gt;, a region-aware incremental editing framework. Instead of global updates or instance-level edits, RAIE introduces &lt;strong&gt;preference regions&lt;/strong&gt; as structured units for localized adaptation. This design enables efficient continual learning while preserving stable preferences.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>MidPO: Dual Preference Optimization for Safety and Helpfulness in Large Language Models via a Mixture of Experts Framework</title>
       <link>http://localhost:1313/posts/midpo/</link>

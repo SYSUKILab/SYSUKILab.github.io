@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LLM-Based Recommender Systems on KILab🚀</title>
+    <link>http://localhost:1313/tags/llm-based-recommender-systems/</link>
+    <description>Recent content in LLM-Based Recommender Systems on KILab🚀</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>**Address**: Room 910D, Engineering Building No.2, Shenzhen Campus of Sun Yat-sen University, No.66 Gongchang Road, Guangming District, Shenzhen, 518107, P. R. China
+
+**Contact**: lvzy7@mail.sysu.edu.cn
+
+© 2025 Knowledge Intelligince Lab @ SYSU.
+</copyright>
+    <lastBuildDate>Tue, 07 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/llm-based-recommender-systems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation</title>
+      <link>http://localhost:1313/posts/raie/</link>
+      <pubDate>Tue, 07 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/raie/</guid>
+      <description>&lt;p&gt;We study the problem of &lt;strong&gt;user preference drift&lt;/strong&gt; in LLM-based recommendation and propose &lt;strong&gt;RAIE&lt;/strong&gt;, a region-aware incremental editing framework. Instead of global updates or instance-level edits, RAIE introduces &lt;strong&gt;preference regions&lt;/strong&gt; as structured units for localized adaptation. This design enables efficient continual learning while preserving stable preferences.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

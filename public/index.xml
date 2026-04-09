@@ -22,6 +22,13 @@
       <description>&lt;p&gt;安全对齐的LLMs在面对无害查询时，常常因表面词汇与恶意问题相似而产生不必要的拒绝，即&amp;quot;过度拒绝&amp;quot;问题。现有对齐方法要么只能减少过度拒绝，要么只能维持安全性，难以同时兼顾。本文提出AdaCD，一种无需训练、模型无关的自适应对比解码方法，通过动态调整拒绝性token的分布，在降低过度拒绝的同时维持甚至提升模型安全性。&lt;/p&gt;</description>
     </item>
     <item>
+      <title>RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation</title>
+      <link>http://localhost:1313/posts/raie/</link>
+      <pubDate>Tue, 07 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/raie/</guid>
+      <description>&lt;p&gt;We study the problem of &lt;strong&gt;user preference drift&lt;/strong&gt; in LLM-based recommendation and propose &lt;strong&gt;RAIE&lt;/strong&gt;, a region-aware incremental editing framework. Instead of global updates or instance-level edits, RAIE introduces &lt;strong&gt;preference regions&lt;/strong&gt; as structured units for localized adaptation. This design enables efficient continual learning while preserving stable preferences.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>MidPO: Dual Preference Optimization for Safety and Helpfulness in Large Language Models via a Mixture of Experts Framework</title>
       <link>http://localhost:1313/posts/midpo/</link>
       <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>

@@ -1,0 +1,910 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation &middot; KILab🚀</title>
+    <meta name="title" content="RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation &middot; KILab🚀" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.a645f3fa02b2ca20e7ef61b236048d95cc9bc2e5b2faf1f0ac0aa85431187c1c.css"
+    integrity="sha256-pkXz&#43;gKyyiDn72GyNgSNlcybwuWy&#43;vHwrAqoVDEYfBw="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="http://localhost:1313/js/main.bundle.min.a83fbb8582177ca1299b6eb0170cc50a07758d9720519960ecd42a9a53e43135.js"
+      integrity="sha256-qD&#43;7hYIXfKEpm26wFwzFCgd1jZcgUZlg7NQqmlPkMTU="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      A region-aware incremental editing framework that enables localized and stable adaptation of LLM-based recommenders under user preference drift.
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/posts/raie/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/raie/">
+  <meta property="og:site_name" content="KILab🚀">
+  <meta property="og:title" content="RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation">
+  <meta property="og:description" content="A region-aware incremental editing framework that enables localized and stable adaptation of LLM-based recommenders under user preference drift.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-04-07T00:00:00+00:00">
+    <meta property="article:tag" content="LLM-Based Recommender Systems">
+    <meta property="article:tag" content="Knowledge Editing">
+    <meta property="article:tag" content="Preference Drift">
+    <meta property="og:image" content="http://localhost:1313/posts/raie/feature.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/raie/feature.png">
+  <meta name="twitter:title" content="RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation">
+  <meta name="twitter:description" content="A region-aware incremental editing framework that enables localized and stable adaptation of LLM-based recommenders under user preference drift.">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "",
+    "name": "RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation",
+    "headline": "RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation",
+    "description": "A region-aware incremental editing framework that enables localized and stable adaptation of LLM-based recommenders under user preference drift.",
+    "abstract": "\u003cp\u003eWe study the problem of \u003cstrong\u003euser preference drift\u003c\/strong\u003e in LLM-based recommendation and propose \u003cstrong\u003eRAIE\u003c\/strong\u003e, a region-aware incremental editing framework. Instead of global updates or instance-level edits, RAIE introduces \u003cstrong\u003epreference regions\u003c\/strong\u003e as structured units for localized adaptation. This design enables efficient continual learning while preserving stable preferences.\u003c\/p\u003e",
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/raie\/",
+    "author" : {
+      "@type": "Person",
+      "name": "KILab"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-04-07T00:00:00\u002b00:00",
+    "datePublished": "2026-04-07T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-04-07T00:00:00\u002b00:00",
+    
+    "keywords": ["LLM-based Recommender Systems","Knowledge Editing","Preference Drift"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "539"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/categories/research/",
+       "name": "Research",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Raie Region Aware Incremental Preference Editing With Lo Ra for Llm Based Recommendation",
+       "position": 4
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="KILab" />
+  
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/lib/katex/katex.min.19095127357ed6d29fe0a63a6b000c913a89f7f1963b765dd3715e97c9852e75.css"
+    integrity="sha256-GQlRJzV&#43;1tKf4KY6awAMkTqJ9/GWO3Zd03Fel8mFLnU="
+  />
+  
+  
+  <script defer src="http://localhost:1313/lib/katex/katex.min.e8d885505949f3a5f4abdd5dd0d53696bd1371ad26ffbf4f310dcd77c8cdae89.js" integrity="sha256-6NiFUFlJ86X0q91d0NU2lr0Tca0m/79PMQ3Nd8jNrok="></script>
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/lib/katex/auto-render.min.bb53eb953394531aae36fdd537065c4244eb8542901a3ce914601d932675b8ac.js"
+    integrity="sha256-u1PrlTOUUxquNv3VNwZcQkTrhUKQGjzpFGAdkyZ1uKw="
+    onload="renderMathInElement(document.body);"
+  ></script>
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >KILab🚀</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Home</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >News</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/publications/"
+                  title="SELECTED PUBLICATIONS"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Publications</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/recruitment/"
+                  title="招聘信息"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Recruitment</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/team/"
+                  title="Team Members"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Team</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+                  <button
+                    id="search-button-1"
+                    title="Search (/)"
+                  >
+                    
+                      <span
+                        class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span><span
+                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        ></span
+                      >
+                    
+                  </button>
+                
+              
+            </li>
+          
+            
+              
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article class="max-w-full">
+    <header>
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation
+      </h1>
+    </header>
+    <section class="prose mt-6 max-w-full dark:prose-invert">
+      <p>We study the problem of <strong>user preference drift</strong> in LLM-based recommendation and propose <strong>RAIE</strong>, a region-aware incremental editing framework. Instead of global updates or instance-level edits, RAIE introduces <strong>preference regions</strong> as structured units for localized adaptation. This design enables efficient continual learning while preserving stable preferences.</p>
+<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300"><strong>Core Problem</strong>: Existing adaptation strategies either update the entire model (causing interference and forgetting) or operate at the instance level (failing to capture distributional shifts). There is a lack of <strong>middle-level granularity</strong> for stable and precise preference adaptation.</span>
+</div>
+
+<p><a
+  class="inline-block !rounded-md bg-primary-600 px-4 py-1 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
+  href="https://arxiv.org/abs/2603.00638"
+  target="_blank"
+  
+  role="button"
+>
+  
+📄 Paper
+
+</a>
+
+<a
+  class="inline-block !rounded-md bg-primary-600 px-4 py-1 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
+  href="https://github.com/fengaogao/RAIE"
+  target="_blank"
+  
+  role="button"
+>
+  
+📁 Code
+
+</a>
+</p>
+<hr>
+<h2 id="main-contributions" class="relative group">Main Contributions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#main-contributions" aria-label="Anchor">#</a></span></h2><ul>
+<li><strong>Region-based Preference Modeling</strong>: Introduces <em>preference regions</em> as semantically coherent clusters of user behaviors.</li>
+<li><strong>Region-aware Incremental Editing</strong>: Designs three editing operations (Update / Expand / Add) to model different drift patterns.</li>
+<li><strong>Region-specific LoRA Adaptation</strong>: Assigns each region a dedicated LoRA adapter for localized parameter updates.</li>
+</ul>
+<hr>
+<h2 id="method" class="relative group">Method <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#method" aria-label="Anchor">#</a></span></h2><h3 id="1-overview" class="relative group">1. Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-overview" aria-label="Anchor">#</a></span></h3><p>RAIE decomposes preference adaptation into three stages:<br>
+(1) knowledge region construction, (2) region-aware editing, and (3) routing-based inference.</p>
+
+  
+  
+  
+  
+  
+
+  
+  
+  <figure class="mx-auto my-0 rounded-md">
+    
+      
+      
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/raie/feature_hu_7ced55504591f749.webp 330w,http://localhost:1313/posts/raie/feature_hu_7f16560cafa3879e.webp 660w
+            
+              ,http://localhost:1313/posts/raie/feature_hu_c00dba1c5e7fd9ce.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/raie/feature_hu_2d3d0479aa84decb.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1855"
+        height="644"
+        class="mx-auto my-0 rounded-md"
+        alt="RAIE framework"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/raie/feature_hu_1c7d743c9ed33069.png" srcset="http://localhost:1313/posts/raie/feature_hu_9a85f3141a3c0988.png 330w,http://localhost:1313/posts/raie/feature_hu_1c7d743c9ed33069.png 660w
+          
+            ,http://localhost:1313/posts/raie/feature_hu_8131cef1f26d7fe5.png 1024w
+          
+          
+            ,http://localhost:1313/posts/raie/feature_hu_ea049f4e85c3cd2f.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+    <figcaption class="text-center">Figure 1. The overall architecture of our proposed RAIE. It consists of three core modules: (a) Knowledge Region Construction in the setup phase (S); (b) Region-aware Editing and LoRA Adaptation in the incremental learning finetune phase (F); and (c) Region-aware Routing in the inference test phase (T).</figcaption>
+  </figure>
+
+
+<hr>
+<h3 id="2-knowledge-region-construction" class="relative group">2. Knowledge Region Construction <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-knowledge-region-construction" aria-label="Anchor">#</a></span></h3><p>User interaction sequences are segmented into subsequences and encoded by a frozen LLM. These representations are clustered via <strong>spherical k-means</strong> to form preference regions:</p>
+<ul>
+<li>each region has a center ( c_k ) and radius ( R_k )</li>
+<li>each region corresponds to a specific interest pattern</li>
+</ul>
+<hr>
+<h3 id="3-region-aware-editing-and-adaptation" class="relative group">3. Region-Aware Editing and Adaptation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-region-aware-editing-and-adaptation" aria-label="Anchor">#</a></span></h3><p>For each incoming subsequence, RAIE:</p>
+<ol>
+<li>computes similarity to existing regions</li>
+<li>selects an editing operation based on confidence</li>
+</ol>
+<ul>
+<li><strong>Update</strong>: refine region center (small drift)</li>
+<li><strong>Expand</strong>: enlarge region boundary (moderate drift)</li>
+<li><strong>Add</strong>: create a new region (emerging preference)</li>
+</ul>
+<p>Each region is associated with a <strong>dedicated LoRA adapter</strong>, trained only on its regional data.</p>
+<hr>
+<h3 id="4-inference-routing" class="relative group">4. Inference Routing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-inference-routing" aria-label="Anchor">#</a></span></h3><p>At inference time:</p>
+<ul>
+<li>map sequence → region</li>
+<li>activate the corresponding LoRA adapter</li>
+</ul>
+<p>This enables <strong>dynamic, context-aware adaptation</strong> without modifying the backbone model.</p>
+<hr>
+<h2 id="experimental-setup" class="relative group">Experimental Setup <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#experimental-setup" aria-label="Anchor">#</a></span></h2><div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300"><strong>Setup</strong>: We evaluate RAIE under a time-sliced continual learning protocol (Set-up → Finetune → Test), measuring both retention and adaptability.</span>
+</div>
+
+<ul>
+<li><strong>Datasets</strong>: MovieLens-10M, Yelp</li>
+<li><strong>Backbones</strong>: BERT4Rec, SASRec, TiSASRec, OpenP5</li>
+<li><strong>Baselines</strong>: LoRA, Replay, LwF, LSAT, MoLE, E-BPR</li>
+<li><strong>Metrics</strong>: Recall@10, NDCG@10</li>
+</ul>
+<hr>
+<h2 id="representative-findings" class="relative group">Representative Findings <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#representative-findings" aria-label="Anchor">#</a></span></h2><ul>
+<li><strong>Superior Adaptation</strong>: RAIE achieves the best performance on future data (Test split).</li>
+<li><strong>Strong Retention</strong>: Maintains competitive performance on historical data (Set-up split).</li>
+<li><strong>Balanced Learning</strong>: Effectively resolves the stability–plasticity trade-off.</li>
+<li><strong>Interpretable Adaptation</strong>: Visualization shows that RAIE preserves global region structure while performing localized adjustments, leading to controlled and interpretable preference updates.</li>
+</ul>
+<p>
+  
+  
+  
+  
+  
+
+  
+  
+  <figure class="mx-auto my-0 rounded-md">
+    
+      
+      
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/raie/result_hu_ce644bb884028e3e.webp 330w,http://localhost:1313/posts/raie/result_hu_3ecd7e1311da1f6.webp 660w
+            
+              ,http://localhost:1313/posts/raie/result_hu_ec4283d350b7e003.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/raie/result_hu_cb96dc12f2c71aa5.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1831"
+        height="1152"
+        class="mx-auto my-0 rounded-md"
+        alt="Main results"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/raie/result_hu_fa1d5e1fd1447b76.png" srcset="http://localhost:1313/posts/raie/result_hu_cf2b2ca3319837e3.png 330w,http://localhost:1313/posts/raie/result_hu_fa1d5e1fd1447b76.png 660w
+          
+            ,http://localhost:1313/posts/raie/result_hu_fa294cf35007189f.png 1024w
+          
+          
+            ,http://localhost:1313/posts/raie/result_hu_4243c43d156a2178.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+    <figcaption class="text-center">Figure 2. RAIE consistently outperforms baselines across datasets and backbones.</figcaption>
+  </figure>
+
+
+
+  
+  
+  
+  
+  
+
+  
+  
+  <figure class="mx-auto my-0 rounded-md">
+    
+      
+      
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/raie/visualization_hu_a0269c62f7003801.webp 330w,http://localhost:1313/posts/raie/visualization_hu_8f425c1ae93a4a58.webp 660w
+            
+              ,http://localhost:1313/posts/raie/visualization_hu_2140735de680a098.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/raie/visualization_hu_b98285e94813db6b.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1360"
+        height="1109"
+        class="mx-auto my-0 rounded-md"
+        alt="Region visualization"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/raie/visualization_hu_faf280c00ecd6e92.png" srcset="http://localhost:1313/posts/raie/visualization_hu_69ad26ee40867121.png 330w,http://localhost:1313/posts/raie/visualization_hu_faf280c00ecd6e92.png 660w
+          
+            ,http://localhost:1313/posts/raie/visualization_hu_cdc7dbcca7bf40f4.png 1024w
+          
+          
+            ,http://localhost:1313/posts/raie/visualization_hu_9b6cbf7b3a29e66f.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+    <figcaption class="text-center">Figure 3. Visualization of preference regions before and after editing, showing localized geometric adjustments with preserved global structure.</figcaption>
+  </figure>
+
+
+<div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+  <span class="pe-3 text-primary-400">
+    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg>
+</span>
+  </span>
+  <span class="dark:text-neutral-300"><strong>Key Insight</strong>: Preference drift should be handled via <strong>structured, localized editing</strong>, rather than global parameter updates.</span>
+</div>
+</p>
+<hr>
+<h2 id="citation" class="relative group">Citation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#citation" aria-label="Anchor">#</a></span></h2><p><strong>WWW 2026</strong></p>
+<p>Jin Zeng, Yupeng Qi, Hui Li, Chengming Li, Ziyu Lyu, Lixin Cui, Lu Bai. 2026. RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation. arXiv preprint arXiv:2603.00638.</p>
+<details>
+<summary>BibTeX</summary>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@article</span><span class="p">{</span><span class="nl">zeng2026raie</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">title</span><span class="p">=</span><span class="s">{RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">author</span><span class="p">=</span><span class="s">{Zeng, Jin and Qi, Yupeng and Li, Hui and Li, Chengming and Lyu, Ziyu and Cui, Lixin and Bai, Lu}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">journal</span><span class="p">=</span><span class="s">{arXiv preprint arXiv:2603.00638}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">year</span><span class="p">=</span><span class="s">{2026}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></details>
+    </section>
+    <footer class="pt-8">
+      
+
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            <p><strong>Address</strong>: Room 910D, Engineering Building No.2, Shenzhen Campus of Sun Yat-sen University, No.66 Gongchang Road, Guangming District, Shenzhen, 518107, P. R. China</p>
+<p><strong>Contact</strong>: <a href="mailto:lvzy7@mail.sysu.edu.cn">lvzy7@mail.sysu.edu.cn</a></p>
+<p>© 2025 Knowledge Intelligince Lab @ SYSU.</p>
+
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>
