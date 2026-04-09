@@ -91,6 +91,10 @@ Our lab is directed by Dr. Ziyu Lyu. We are dedicated to advancing cutting-edge 
 
 
 {{< alert "lightbulb" >}}
+[2026.4] Congrats to **Jin Zeng**! Our work, "RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation", has been accepted by **WWW 2026**.
+{{< /alert >}}
+
+{{< alert "lightbulb" >}}
 [2026.4] Congrats to **Pengyu Qi**! Our work, "Please Refuse to Answer Me! Mitigating Over-Refusal in LLMs via Adaptive Contrastive Decoding", has been accepted by **ACL 2026 Main Conference**.
 {{< /alert >}}
 
