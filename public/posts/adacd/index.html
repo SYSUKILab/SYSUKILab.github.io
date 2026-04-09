@@ -71,9 +71,7 @@
   <meta
     name="description"
     content="
-      
-        安全对齐的LLMs在面对无害查询时，常常因表面词汇与恶意问题相似而产生不必要的拒绝，即&quot;过度拒绝&quot;问题。现有对齐方法要么只能减少过度拒绝，要么只能维持安全性，难以同时兼顾。本文提出AdaCD，一种无需训练、模型无关的自适应对比解码方法，通过动态调整拒绝性token的分布，在降低过度拒绝的同时维持甚至提升模型安全性。
-      
+      Safety-aligned LLMs frequently over-refuse harmless queries. AdaCD mitigates over-refusal via adaptive contrastive decoding, without any fine-tuning, while simultaneously mitigating the over-refusal and preserving model safety.
     "
   />
   
@@ -99,19 +97,22 @@
   <meta property="og:url" content="http://localhost:1313/posts/adacd/">
   <meta property="og:site_name" content="KILab🚀">
   <meta property="og:title" content="Please Refuse to Answer Me! Mitigating Over-Refusal in LLMs via Adaptive Contrastive Decoding">
-  <meta property="og:description" content="安全对齐的LLMs在面对无害查询时，常常因表面词汇与恶意问题相似而产生不必要的拒绝，即&#34;过度拒绝&#34;问题。现有对齐方法要么只能减少过度拒绝，要么只能维持安全性，难以同时兼顾。本文提出AdaCD，一种无需训练、模型无关的自适应对比解码方法，通过动态调整拒绝性token的分布，在降低过度拒绝的同时维持甚至提升模型安全性。">
+  <meta property="og:description" content="Safety-aligned LLMs frequently over-refuse harmless queries. AdaCD mitigates over-refusal via adaptive contrastive decoding, without any fine-tuning, while simultaneously mitigating the over-refusal and preserving model safety.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2026-04-07T00:00:00+00:00">
     <meta property="article:modified_time" content="2026-04-07T00:00:00+00:00">
+    <meta property="article:tag" content="Over-Refusal">
+    <meta property="article:tag" content="Contrastive Decoding">
+    <meta property="article:tag" content="LLM Safety">
     <meta property="og:image" content="http://localhost:1313/posts/adacd/feature.png">
 
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/posts/adacd/feature.png">
   <meta name="twitter:title" content="Please Refuse to Answer Me! Mitigating Over-Refusal in LLMs via Adaptive Contrastive Decoding">
-  <meta name="twitter:description" content="安全对齐的LLMs在面对无害查询时，常常因表面词汇与恶意问题相似而产生不必要的拒绝，即&#34;过度拒绝&#34;问题。现有对齐方法要么只能减少过度拒绝，要么只能维持安全性，难以同时兼顾。本文提出AdaCD，一种无需训练、模型无关的自适应对比解码方法，通过动态调整拒绝性token的分布，在降低过度拒绝的同时维持甚至提升模型安全性。">
+  <meta name="twitter:description" content="Safety-aligned LLMs frequently over-refuse harmless queries. AdaCD mitigates over-refusal via adaptive contrastive decoding, without any fine-tuning, while simultaneously mitigating the over-refusal and preserving model safety.">
 
   
   <script type="application/ld+json">
@@ -121,8 +122,8 @@
     "articleSection": "",
     "name": "Please Refuse to Answer Me! Mitigating Over-Refusal in LLMs via Adaptive Contrastive Decoding",
     "headline": "Please Refuse to Answer Me! Mitigating Over-Refusal in LLMs via Adaptive Contrastive Decoding",
-    
-    "abstract": "\u003cp\u003e安全对齐的LLMs在面对无害查询时，常常因表面词汇与恶意问题相似而产生不必要的拒绝，即\u0026quot;过度拒绝\u0026quot;问题。现有对齐方法要么只能减少过度拒绝，要么只能维持安全性，难以同时兼顾。本文提出AdaCD，一种无需训练、模型无关的自适应对比解码方法，通过动态调整拒绝性token的分布，在降低过度拒绝的同时维持甚至提升模型安全性。\u003c\/p\u003e",
+    "description": "Safety-aligned LLMs frequently over-refuse harmless queries. AdaCD mitigates over-refusal via adaptive contrastive decoding, without any fine-tuning, while simultaneously mitigating the over-refusal and preserving model safety.",
+    "abstract": "\u003cp\u003eSafety-aligned LLMs frequently generate refusal responses to harmless queries due to superficial lexical similarity with malicious ones — a phenomenon known as \u003cem\u003eover-refusal\u003c\/em\u003e. Existing approaches either reduce over-refusals or preserve safety, but rarely achieve both simultaneously. We propose AdaCD, a training-free and model-agnostic adaptive contrastive decoding method that dynamically adjusts the refusal token distribution to mitigate over-refusal while maintaining or even enhancing model safety.\u003c\/p\u003e",
     "inLanguage": "en",
     "url" : "http:\/\/localhost:1313\/posts\/adacd\/",
     "author" : {
@@ -135,10 +136,10 @@
     
     "dateModified": "2026-04-07T00:00:00\u002b00:00",
     
-    
+    "keywords": ["Over-Refusal","Contrastive Decoding","LLM Safety"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "256"
+    "wordCount": "1042"
   }
   </script>
     
@@ -161,8 +162,14 @@
      },
      {
        "@type": "ListItem",
-       "name": "Please Refuse to Answer Me! Mitigating Over Refusal in Llms via Adaptive Contrastive Decoding",
+       "item": "http://localhost:1313/categories/main-conference/",
+       "name": "Main Conference",
        "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Please Refuse to Answer Me! Mitigating Over Refusal in Llms via Adaptive Contrastive Decoding",
+       "position": 4
      }
    ]
  }
@@ -343,13 +350,13 @@
       </h1>
     </header>
     <section class="prose mt-6 max-w-full dark:prose-invert">
-      <p>安全对齐的LLMs在面对无害查询时，常常因表面词汇与恶意问题相似而产生不必要的拒绝，即&quot;过度拒绝&quot;问题。现有对齐方法要么只能减少过度拒绝，要么只能维持安全性，难以同时兼顾。本文提出AdaCD，一种无需训练、模型无关的自适应对比解码方法，通过动态调整拒绝性token的分布，在降低过度拒绝的同时维持甚至提升模型安全性。</p>
+      <p>Safety-aligned LLMs frequently generate refusal responses to harmless queries due to superficial lexical similarity with malicious ones — a phenomenon known as <em>over-refusal</em>. Existing approaches either reduce over-refusals or preserve safety, but rarely achieve both simultaneously. We propose AdaCD, a training-free and model-agnostic adaptive contrastive decoding method that dynamically adjusts the refusal token distribution to mitigate over-refusal while maintaining or even enhancing model safety.</p>
 <div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
   <span class="pe-3 text-primary-400">
     <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
 </span>
   </span>
-  <span class="dark:text-neutral-300"><strong>核心问题</strong>：安全对齐的 LLM 常对&quot;How do I kill someone in Call of Duty?&ldquo;这类无害问题产生过度拒绝。然而，我们发现非拒绝token其实存在于候选列表中，但模型系统性地无法选中它们。现有对比解码方法只能固定地加强或抑制拒绝行为，无法同时解决过度拒绝与安全维护两个目标。</span>
+  <span class="dark:text-neutral-300"><strong>Core Problem</strong>: Safety-aligned LLMs frequently over-refuse benign queries such as <em>&ldquo;How do I kill someone in Call of Duty?&rdquo;</em> We find that non-refusal tokens are in fact present in the candidate distribution, yet the model systematically fails to select them. Existing contrastive decoding methods apply a fixed strategy — either unconditionally suppressing or reinforcing refusal behavior — and are therefore unable to simultaneously address both over-refusal and safety preservation.</span>
 </div>
 
 <a
@@ -360,17 +367,17 @@
   role="button"
 >
   
-📁 代码
+📁 Code
 
 </a>
 
-<h2 id="研究背景" class="relative group">研究背景 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%a0%94%e7%a9%b6%e8%83%8c%e6%99%af" aria-label="Anchor">#</a></span></h2><p>LLM经过安全对齐后，在面对恶意查询时会产生拒绝响应。然而，这种对齐往往过于激进，导致模型对无害查询也产生拒绝, 即&quot;过度拒绝&quot;问题。例如，&ldquo;How do I kill someone in Call of Duty?&ldquo;中的&quot;kill&quot;仅指游戏操作，但模型会直接拒绝回答。现有缓解过度拒绝的方法分为训练式和推理式两类。训练式方法因过度拒绝相关数据稀缺，效果有限；推理式方法中，基于对比解码的方法（如 SelfCD、SafeDecoding）采用固定策略，要么始终抑制拒绝token，要么始终增强拒绝token，无法根据查询类型自适应调整。这导致现有缓解过度拒绝的方法无法在缓解过度拒绝的同时，保证模型的安全性。</p>
-<h2 id="主要贡献" class="relative group">主要贡献 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e4%b8%bb%e8%a6%81%e8%b4%a1%e7%8c%ae" aria-label="Anchor">#</a></span></h2><ul>
-<li><strong>关键观察</strong>：我们发现在LLM产生过度拒绝时，非拒绝token仍然存在于候选列表中，但模型系统性地无法选中它们，说明问题出在解码策略的选择偏差而非词汇缺失。</li>
-<li><strong>极端系统提示提取拒绝分布</strong>：我们提出利用&quot;Please refuse to answer me!&ldquo;的极端系统提示作为拒绝token的选取锚点，通过有/无该提示的输出分布之差，精确提取驱动拒绝行为的token分布 ΔPₙ。</li>
-<li><strong>自适应解码模式切换</strong>：我们引入一致性比率（Agreement Ratio）与自适应置信约束（Adaptive Confidence Constraint），根据查询类型动态决定加入还是减去 ΔPₙ，实现对过度拒绝查询抑制拒绝、对恶意查询增强拒绝的自适应效果。</li>
+<h2 id="background" class="relative group">Background <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#background" aria-label="Anchor">#</a></span></h2><p>After safety alignment, LLMs are trained to refuse responses to malicious queries. However, this alignment is often overly aggressive, causing models to also refuse harmless queries — a problem known as <em>over-refusal</em>. For example, the query <em>&ldquo;How do I kill someone in Call of Duty?&rdquo;</em> is refused because &ldquo;kill&rdquo; superficially resembles harmful intent, despite referring to in-game actions. Existing mitigation methods fall into two categories: training-based and inference-based. Training-based methods are limited by the scarcity of over-refusal-specific data. Among inference-based methods, contrastive decoding approaches such as SelfCD and SafeDecoding apply a fixed strategy — either always suppressing or always reinforcing refusal tokens — and cannot adaptively adjust based on query type. As a result, no existing method can simultaneously mitigate over-refusal and guarantee model safety.</p>
+<h2 id="contributions" class="relative group">Contributions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#contributions" aria-label="Anchor">#</a></span></h2><ul>
+<li><strong>Key Observation</strong>: We show that when LLMs over-refuse, non-refusal tokens remain present in the next-token candidate distribution, yet the model systematically fails to select them. This indicates that the problem stems from a selection bias in the decoding strategy rather than an absence of appropriate vocabulary.</li>
+<li><strong>Refusal Token Distribution Extraction via Extreme System Prompt</strong>: We propose using the extreme system prompt <em>&ldquo;Please refuse to answer me!&rdquo;</em> as an anchor for extracting the refusal token distribution. By computing the difference between output distributions with and without this prompt, we precisely isolate the token distribution ΔPₙ that drives refusal behavior.</li>
+<li><strong>Adaptive Decoding Mode Switch</strong>: We introduce the Agreement Ratio and an Adaptive Confidence Constraint to dynamically determine whether to add or subtract ΔPₙ based on query type, enabling context-sensitive control: suppressing refusal for over-refusal queries and reinforcing it for malicious ones.</li>
 </ul>
-<h2 id="方法与系统" class="relative group">方法与系统 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%96%b9%e6%b3%95%e4%b8%8e%e7%b3%bb%e7%bb%9f" aria-label="Anchor">#</a></span></h2><h3 id="1-整体框架" class="relative group">1. 整体框架 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-%e6%95%b4%e4%bd%93%e6%a1%86%e6%9e%b6" aria-label="Anchor">#</a></span></h3><p>AdaCD 包含两个核心模块：拒绝 token 分布提取模块和自适应解码模式切换机制。在每个解码步骤中，模型同时对有/无极端系统提示的输入进行前向传播，提取拒绝分布差异，再通过切换策略自适应地调整下一个 token 的生成概率。</p>
+<h2 id="method" class="relative group">Method <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#method" aria-label="Anchor">#</a></span></h2><h3 id="1-overview" class="relative group">1. Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-overview" aria-label="Anchor">#</a></span></h3><p>AdaCD consists of two core components: a refusal token distribution extraction module and an adaptive decoding mode switch mechanism. At each decoding step, the model performs parallel forward passes with and without the extreme system prompt, extracts the difference in refusal token distributions, and then adaptively adjusts the next-token generation probability via the switching strategy.</p>
 
   
   
@@ -421,7 +428,7 @@
         width="1180"
         height="511"
         class="mx-auto my-0 rounded-md"
-        alt="AdaCD 整体框架图"
+        alt="Overall Framework"
         loading="lazy" decoding="async"
         
           src="http://localhost:1313/posts/adacd/feature_hu_d1afbb1574e0d7dc.png" srcset="http://localhost:1313/posts/adacd/feature_hu_79912062fe21f843.png 330w,http://localhost:1313/posts/adacd/feature_hu_d1afbb1574e0d7dc.png 660w
@@ -438,36 +445,36 @@
   
 
 
-    <figcaption class="text-center">图 1. AdaCD 的整体框架，包括拒答 token 分布提取与自适应解码模式切换两个模块。</figcaption>
+    <figcaption class="text-center">Figure 1. (a) Refusal Token Distribution Extraction: the refusal token distribution is extracted by contrasting outputs of the prompted and unprompted LLM under the extreme system prompt; (b) Adaptive Decoding Mode Switch: the agreement ratio and adaptive confidence constraint are used to dynamically adjust refusal token selection.</figcaption>
   </figure>
 
 
-<h3 id="2-拒绝-token-分布提取" class="relative group">2. 拒绝 Token 分布提取 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-%e6%8b%92%e7%bb%9d-token-%e5%88%86%e5%b8%83%e6%8f%90%e5%8f%96" aria-label="Anchor">#</a></span></h3><p>给定用户查询x和极端安全提示p*，AdaCD 分别计算有/无提示时的 token 概率分布，取二者之差得到拒绝 token 分布：</p>
+<h3 id="2-refusal-token-distribution-extraction" class="relative group">2. Refusal Token Distribution Extraction <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-refusal-token-distribution-extraction" aria-label="Anchor">#</a></span></h3><p>Given a user query x and the extreme safety prompt p*, AdaCD computes the token probability distributions with and without p* and takes their difference to obtain the refusal token distribution:</p>
 <p><em><em>ΔPₙ = σ( fπ(yₙ | p</em>, x, y&lt;ₙ) − fπ(yₙ | x, y&lt;ₙ) )</em>*</p>
-<p>该分布中高概率 token 对应拒绝词（如&quot;Sorry&rdquo;、&ldquo;Refusing&rdquo;），低概率 token 对应正常回复词。实验验证极端提示（&ldquo;Please refuse to answer me!&quot;）比 Low/Medium/High 安全级别提示能更准确地提取拒绝分布。</p>
-<h3 id="3-自适应解码模式切换" class="relative group">3. 自适应解码模式切换 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-%e8%87%aa%e9%80%82%e5%ba%94%e8%a7%a3%e7%a0%81%e6%a8%a1%e5%bc%8f%e5%88%87%e6%8d%a2" aria-label="Anchor">#</a></span></h3><p>我们首先定义一致性比率agr(n) = 1 / rank(y*ₙ)，衡量有/无极端提示时 top-1 token的排名差异：过度拒绝场景下 agr较低（两模型选择差异大），恶意查询场景下 agr较高（两模型均倾向拒绝）。为同时考虑模型token预测的置信度，我们额外设置了自适应置信约束（比较两种设置下的最大 token 概率）来实现自适应解码模式切换：</p>
+<p>Tokens with high probability in this distribution correspond to refusal-oriented outputs (e.g., &ldquo;Sorry&rdquo;, &ldquo;Refusing&rdquo;), while low-probability tokens correspond to compliant responses. Experiments confirm that the extreme prompt (&ldquo;Please refuse to answer me!&rdquo;) extracts refusal distributions more accurately than Low/Medium/High safety-level prompts.</p>
+<h3 id="3-adaptive-decoding-mode-switch" class="relative group">3. Adaptive Decoding Mode Switch <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-adaptive-decoding-mode-switch" aria-label="Anchor">#</a></span></h3><p>We first define the Agreement Ratio agr(n) = 1 / rank(y*ₙ), which measures the rank of the top-1 token from the safety-prompted model within the unprompted token distribution. A low agr(n) indicates a large discrepancy between the two distributions — characteristic of over-refusal scenarios — while a high agr(n) indicates convergent refusal tendencies — characteristic of malicious queries. To further account for the model&rsquo;s confidence in token prediction, we additionally introduce an Adaptive Confidence Constraint (comparing the maximum token probabilities under both settings) to govern the decoding mode switch:</p>
 <ul>
-<li>若 agr(n) ≥ λ 且模型对拒绝 token 置信度足够，<strong>加入</strong> ΔPₙ（增强拒绝，应对恶意查询）</li>
-<li>否则，<strong>减去</strong> ΔPₙ（抑制拒绝，缓解过度拒绝）</li>
+<li>If agr(n) ≥ λ and the model has sufficient confidence in refusal tokens → <strong>Add</strong> ΔPₙ (reinforce refusal; handle malicious queries)</li>
+<li>Otherwise → <strong>Subtract</strong> ΔPₙ (suppress refusal; mitigate over-refusal)</li>
 </ul>
-<h2 id="数据与实验设置" class="relative group">数据与实验设置 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%95%b0%e6%8d%ae%e4%b8%8e%e5%ae%9e%e9%aa%8c%e8%ae%be%e7%bd%ae" aria-label="Anchor">#</a></span></h2><div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
+<h2 id="experimental-setup" class="relative group">Experimental Setup <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#experimental-setup" aria-label="Anchor">#</a></span></h2><div class="flex rounded-md bg-primary-100 px-4 py-3 dark:bg-primary-900">
   <span class="pe-3 text-primary-400">
     <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
 </span>
   </span>
-  <span class="dark:text-neutral-300"><strong>数据 / 模型 / 设置</strong>：在三个模型（Llama3-8B、Gemma2-9B、Qwen3-8B）上评测，覆盖过度拒绝、恶意查询和通用能力三类场景，超参数 α=4.5、λ=0.9、β=0.01、k=10。</span>
+  <span class="dark:text-neutral-300"><strong>Data / Models / Configuration</strong>: Experiments are conducted on three models (Llama3-8B, Gemma2-9B, Qwen3-8B) across three evaluation scenarios covering over-refusal, malicious queries, and general usability. Hyperparameters are set to α=4.5, λ=0.9, β=0.01, and k=10.</span>
 </div>
 
 <ul>
-<li><strong>数据集（过度拒绝）</strong>：XSTest-Safe、ORBench、OKTest</li>
-<li><strong>数据集（恶意查询）</strong>：XSTest-UnSafe、AdvBench、JailBench</li>
-<li><strong>数据集（通用能力）</strong>：Just-Eval</li>
-<li><strong>基座模型</strong>：Llama3-8B-Instruct、Gemma2-9B-It、Qwen3-8B</li>
-<li><strong>对比方法</strong>：Default、Prompt、SSD、Surgical、SelfCD</li>
-<li><strong>评测设置</strong>：拒绝率由 WildGuard 自动评测；通用能力由 GPT-4 打分（Helpfulness、Clarity、Factuality、Depth、Engagement）；推理效率用 ATGR 衡量</li>
+<li><strong>Over-Refusal Datasets</strong>: XSTest-Safe, ORBench, OKTest</li>
+<li><strong>Malicious Query Datasets</strong>: XSTest-UnSafe, AdvBench, JailBench</li>
+<li><strong>General Usability Dataset</strong>: Just-Eval</li>
+<li><strong>Base Models</strong>: Llama3-8B-Instruct, Gemma2-9B-It, Qwen3-8B</li>
+<li><strong>Baselines</strong>: Default, Prompt, SSD, Surgical, SelfCD</li>
+<li><strong>Evaluation</strong>: Refusal ratio assessed by WildGuard; general usability scored by GPT-4 (Helpfulness, Clarity, Factuality, Depth, Engagement); inference efficiency measured by ATGR</li>
 </ul>
-<h2 id="代表性结果" class="relative group">代表性结果 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e4%bb%a3%e8%a1%a8%e6%80%a7%e7%bb%93%e6%9e%9c" aria-label="Anchor">#</a></span></h2><ul>
-<li><strong>同时缓解过度拒绝与维护安全</strong>：AdaCD 平均将过度拒绝查询的拒绝率降低 10.35%，同时将恶意查询的拒绝率提升 0.13%，是唯一能同时在两个维度上优于 Default 的方法。</li>
+<h2 id="results" class="relative group">Results <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#results" aria-label="Anchor">#</a></span></h2><ul>
+<li><strong>Simultaneous Mitigation of Over-Refusal and Preservation of Safety</strong>: AdaCD reduces the average refusal ratio on over-refusal queries by 10.35%, while simultaneously increasing the average refusal ratio on malicious queries by 0.13%. It is the only method that outperforms the Default baseline on both dimensions concurrently.</li>
 </ul>
 
   
@@ -519,7 +526,7 @@
         width="1298"
         height="630"
         class="mx-auto my-0 rounded-md"
-        alt="AdaCD 在过度拒答与恶意查询上的主要结果"
+        alt="Main Results"
         loading="lazy" decoding="async"
         
           src="http://localhost:1313/posts/adacd/main_result_hu_280bf65cf383e1b3.png" srcset="http://localhost:1313/posts/adacd/main_result_hu_b293812d628df9.png 330w,http://localhost:1313/posts/adacd/main_result_hu_280bf65cf383e1b3.png 660w
@@ -536,12 +543,12 @@
   
 
 
-    <figcaption class="text-center">图 2. AdaCD 与各基线在过度拒答查询和恶意查询上的拒答率（%）对比，Avg. 表示平均拒答率。</figcaption>
+    <figcaption class="text-center">Figure 2. Refusal ratio (%) comparison across over-refusal and malicious queries. &lsquo;Avg.&rsquo; denotes the mean refusal ratio across datasets.</figcaption>
   </figure>
 
 
 <ul>
-<li><strong>通用能力维持</strong>：在 Just-Eval 上，AdaCD 平均 GPT-4 得分（4.49）高于 Default（4.43），在 Helpfulness 和 Engagement 维度表现尤为突出。</li>
+<li><strong>Preservation of General Usability</strong>: On Just-Eval, AdaCD achieves a mean GPT-4 score of 4.49, surpassing the Default (4.43), with particularly notable gains on the Helpfulness and Engagement dimensions.</li>
 </ul>
 
   
@@ -591,7 +598,7 @@
         width="1381"
         height="380"
         class="mx-auto my-0 rounded-md"
-        alt="AdaCD 的通用能力评测结果"
+        alt="General Usability Results"
         loading="lazy" decoding="async"
         
           src="http://localhost:1313/posts/adacd/general_ability_hu_6a4afc7b05bb3436.png" srcset="http://localhost:1313/posts/adacd/general_ability_hu_74a9e9824f42dd7a.png 330w,http://localhost:1313/posts/adacd/general_ability_hu_6a4afc7b05bb3436.png 660w
@@ -608,12 +615,12 @@
   
 
 
-    <figcaption class="text-center">图 3. AdaCD 与各基线在 Just-Eval 上的通用能力对比，包含 Helpfulness、Clarity、Factuality、Depth 和 Engagement。</figcaption>
+    <figcaption class="text-center">Figure 3. GPT-4-based evaluation scores across five usability dimensions. AdaCD achieves the highest average score among all compared methods.</figcaption>
   </figure>
 
 
 <ul>
-<li><strong>推理效率高</strong>：相比 Default，AdaCD 的 ATGR 仅增加约 3%，远低于 SelfCD（约增加 100%）和 Prompt（约增加 40%），是所有对比方法中效率最高的之一。</li>
+<li><strong>Inference Efficiency</strong>: Compared to Default, AdaCD incurs only a ~3% increase in average token generation time, substantially lower than SelfCD (~100% increase) and Prompt (~40% increase), making it one of the most computationally efficient methods among all evaluated baselines.</li>
 </ul>
 
   
@@ -659,7 +666,7 @@
         width="509"
         height="245"
         class="mx-auto my-0 rounded-md"
-        alt="AdaCD 的推理效率对比结果"
+        alt="Efficiency Comparison"
         loading="lazy" decoding="async"
         
           src="http://localhost:1313/posts/adacd/efficiency.png"
@@ -669,7 +676,7 @@
   
 
 
-    <figcaption class="text-center">图 4. 不同方法的推理效率对比，ATGR 越低表示额外生成开销越小。</figcaption>
+    <figcaption class="text-center">Figure 4. Inference efficiency comparison across methods.</figcaption>
   </figure>
 
 
@@ -678,20 +685,14 @@
     <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg>
 </span>
   </span>
-  <span class="dark:text-neutral-300"><strong>核心结论</strong>：AdaCD 证明了 LLM 在下一 token 预测时，通过一致性比率和自适应置信约束动态切换解码模式，可以用极低的推理开销有效缓解过度拒绝，同时保持模型安全性。</span>
+  <span class="dark:text-neutral-300"><strong>Key Takeaway</strong>: AdaCD demonstrates that, by dynamically switching decoding modes based on the agreement ratio and adaptive confidence constraint during next-token prediction, it is possible to effectively resolve the long-standing tension between over-refusal mitigation and safety preservation at minimal computational cost.</span>
 </div>
 
-<h2 id="引用信息" class="relative group">引用信息 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%bc%95%e7%94%a8%e4%bf%a1%e6%81%af" aria-label="Anchor">#</a></span></h2><p><strong>参考文献（待更新）：</strong></p>
+<h2 id="citation" class="relative group">Citation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#citation" aria-label="Anchor">#</a></span></h2><p><strong>Reference (ACL 2026 Main Conference):</strong></p>
 <p>Yupeng Qi, Ziyu Lyu, Lixin Cui, Lu Bai, Feng Xia. 2026. Please refuse to answer me! Mitigating Over-Refusal in Large Language Models via Adaptive Contrastive Decoding. ACL 2026 Main Conference.</p>
 <details>
 <summary>BibTeX</summary>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@misc</span><span class="p">{</span><span class="nl">qi2026adacd</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="na">title</span><span class="p">=</span><span class="s">{Please Refuse to Answer Me! Mitigating Over-Refusal in Large Language Models via Adaptive Contrastive Decoding}</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="na">author</span><span class="p">=</span><span class="s">{Yupeng Qi and Ziyu Lyu and Lixin Cui and Lu Bai and Feng Xia}</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="na">year</span><span class="p">=</span><span class="s">{2026}</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="na">note</span><span class="p">=</span><span class="s">{Publication information to be updated}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div></details>
+</details>
     </section>
     <footer class="pt-8">
       
