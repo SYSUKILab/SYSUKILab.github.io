@@ -1,17 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Lab Activities on KILab🚀</title>
-    <link>http://localhost:1313/activities/</link>
-    <description>Recent content in Lab Activities on KILab🚀</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <copyright>**Address**: Room 910D, Engineering Building No.2, Shenzhen Campus of Sun Yat-sen University, No.66 Gongchang Road, Guangming District, Shenzhen, 518107, P. R. China
-
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lab Activities on KILab🚀</title><link>https://kilab.site/activities/</link><description>Recent content in Lab Activities on KILab🚀</description><generator>Hugo</generator><language>en</language><copyright>**Address**: Room 910D, Engineering Building No.2, Shenzhen Campus of Sun Yat-sen University, No.66 Gongchang Road, Guangming District, Shenzhen, 518107, P. R. China
 **Contact**: lvzy7@mail.sysu.edu.cn
-
-© 2025 Knowledge Intelligince Lab @ SYSU.
-</copyright>
-    <atom:link href="http://localhost:1313/activities/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+© 2025 Knowledge Intelligince Lab @ SYSU.</copyright><atom:link href="https://kilab.site/activities/index.xml" rel="self" type="application/rss+xml"/></channel></rss>

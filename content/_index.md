@@ -95,11 +95,11 @@ Our lab is directed by Dr. Ziyu Lyu. We are dedicated to advancing cutting-edge 
 {{< /alert >}}
 
 {{< alert "lightbulb" >}}
-[2026.4] Congrats to **Pengyu Qi**! Our work, "Please Refuse to Answer Me! Mitigating Over-Refusal in LLMs via Adaptive Contrastive Decoding", has been accepted by **ACL 2026 Main Conference**.
+[2026.4] Congrats to **Yupeng Qi**! Our work, "Please Refuse to Answer Me! Mitigating Over-Refusal in LLMs via Adaptive Contrastive Decoding", has been accepted by **ACL 2026 Main Conference**.
 {{< /alert >}}
 
 {{< alert "lightbulb" >}}
-[2025.8] Congrats to **Pengyu Qi**! Our work, "MidPO: Dual Preference Optimization for Safety and Helpfulness in LLMs via MoE Framework", has been accepted by **EMNLP FINDING 2025**.
+[2025.8] Congrats to **Yupeng Qi**! Our work, "MidPO: Dual Preference Optimization for Safety and Helpfulness in LLMs via MoE Framework", has been accepted by **EMNLP FINDING 2025**.
 {{< /alert >}}
 
 {{< alert "lightbulb" >}}

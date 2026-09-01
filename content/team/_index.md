@@ -42,9 +42,9 @@ Dr. Ziyu Lyu is currently an Associate Professor at School of Cyber Science and 
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin: 30px 0;">
 
 <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-<img src="/images/pengyu_qi.png" alt="Pengyu Qi" style="width: 180px; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+<img src="/images/yupeng_qi.png" alt="Yupeng Qi" style="width: 180px; height: 240px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
 <div>
-<strong>Pengyu Qi</strong><br>
+<strong>Yupeng Qi</strong><br>
 Ph.D. Student (2024.09-)<br>
 AI Safety<br>
 <a href="https://arxiv.org/abs/2506.02460">MidPO</a> (EMNLP FINDING 25)<br>

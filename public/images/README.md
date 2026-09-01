@@ -10,7 +10,7 @@ To display team member photos, add the following files:
 - `prof_lyu.jpg` - Professor Ziyu Lyu photo (recommended size: 200x200 pixels)
 
 ### PhD Students
-- `pengyu_qi.jpg` - Pengyu Qi photo (recommended size: 150x150 pixels)
+- `yupeng_qi.jpg` - Yupeng Qi photo (recommended size: 150x150 pixels)
 - `jin_zeng.jpg` - Jin Zeng photo (recommended size: 150x150 pixels)  
 - `wenbin_guo.png` - Wenbin Guo photo (recommended size: 150x150 pixels)
 
