@@ -22,3 +22,6 @@ node_modules/
 public/
 # Hugo cache
 .hugo_build.lock
+
+# Internal templates (not for public repo)
+PAPER_BLOG_TEMPLATE.md
