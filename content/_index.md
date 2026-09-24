@@ -91,6 +91,10 @@ Our lab is directed by Dr. Ziyu Lyu. We are dedicated to advancing cutting-edge 
 
 
 {{< alert "lightbulb" >}}
+[2026.8] Congrats to **Yuhan Hu and Yupeng Qi**! Our work, "Beyond Known Event Types: Open-Domain Event Detection via Ontology-Guided Grounding–Discovery Resolution", has been accepted by **Findings of EMNLP 2026**.
+{{< /alert >}}
+
+{{< alert "lightbulb" >}}
 [2026.4] Congrats to **Jin Zeng**! Our work, "RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation", has been accepted by **WWW 2026**.
 {{< /alert >}}
 
