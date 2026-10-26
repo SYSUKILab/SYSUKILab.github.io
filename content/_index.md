@@ -1,5 +1,10 @@
 ---
 description: "Welcome to Knowledge Intelligence Lab (KILab) at Sun Yat-sen University"
+banner:
+  image: "images/kilab-banner.jpg"
+  alt: "Knowledge Intelligence Lab — acquiring, understanding, reasoning over, and leveraging grounded knowledge embodied in humans, machines, and the physical world to enable trustworthy, controllable, and personalized human-AI interaction and collaboration."
+  width: 1280
+  height: 426
 ---
 
 {{< alert "circle-info" >}}

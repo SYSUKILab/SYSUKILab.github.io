@@ -1,3 +1,16 @@
+{{ with .Params.banner }}
+  <div class="mb-8">
+    <img
+      src="{{ .image | relURL }}"
+      alt="{{ .alt }}"
+      width="{{ .width }}"
+      height="{{ .height }}"
+      class="block h-auto w-full"
+      loading="eager"
+      fetchpriority="high"
+    >
+  </div>
+{{ end }}
 <article class="prose max-w-full dark:prose-invert">
   {{ with .Title }}
     <header>
